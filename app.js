@@ -41,11 +41,11 @@ logger.log('message from new class')
 
 // http module
 const server = http.createServer((req, res) => {
-    if (req.url === '/') {
+    if (req.url === '/app') {
         res.write('Hello World')
         res.end()
     }
-    if (req.url === '/api/courses') {
+    if (req.url === '/app/api/courses') {
         res.write(JSON.stringify([1, 2, 3]))
         res.end()
     }
